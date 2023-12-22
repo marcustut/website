@@ -4,7 +4,8 @@ type props = JsxDOM.domProps
 let make = (props: props) => {
   <a
     {...props}
-    className={`transition-colors duration-200 text-neutral-500 hover:text-black ${switch props.className {
+    className={`cursor-pointer transition-colors duration-200 text-neutral-500 hover:text-black 
+    ${switch props.className {
       | Some(cn) => cn
       | None => ""
       }}`}>
