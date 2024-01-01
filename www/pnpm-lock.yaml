@@ -5,12 +5,24 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  '@glennsl/rescript-fetch':
+    specifier: ^0.2.0
+    version: 0.2.0
+  '@myriaddreamin/typst.react':
+    specifier: ^0.4.1
+    version: 0.4.1(@myriaddreamin/typst-ts-renderer@0.4.1)(@myriaddreamin/typst.ts@0.4.1)(react-dom@18.2.0)(react@18.2.0)
   '@rescript/core':
     specifier: ^0.6.0
     version: 0.6.0(rescript@10.1.4)
   '@rescript/react':
     specifier: ^0.11.0
     version: 0.11.0(react-dom@18.2.0)(react@18.2.0)
+  '@rescriptbr/react-query':
+    specifier: ^1.1.0
+    version: 1.1.0(@rescript/react@0.11.0)(react-dom@18.2.0)(react@18.2.0)(rescript@10.1.4)
+  '@tanstack/react-query':
+    specifier: ^5.17.0
+    version: 5.17.0(react@18.2.0)
   react:
     specifier: ^18.2.0
     version: 18.2.0
@@ -499,6 +511,10 @@ packages:
     dev: true
     optional: true
 
+  /@glennsl/rescript-fetch@0.2.0:
+    resolution: {integrity: sha512-0tsEqJ/6/WBm02prM4RYG+qpnNTaB8QKKIeQHXdDaE4C5YfA/nzjxMNW3CjsGIaEgyrAmmIXFS0kx24UjvOI6A==}
+    dev: false
+
   /@jest/schemas@29.6.3:
     resolution: {integrity: sha512-mo5j5X+jIZmJQveBKeS/clAueipV7KgiX1vMgCxam1RNYiqE1w62n0/tJJnHtjW8ZHcQco5gY85jA3mi0L+nSA==}
     engines: {node: ^14.15.0 || ^16.10.0 || >=18.0.0}
@@ -550,6 +566,39 @@ packages:
       '@jridgewell/sourcemap-codec': 1.4.15
     dev: true
 
+  /@myriaddreamin/typst-ts-renderer@0.4.1:
+    resolution: {integrity: sha512-5NXDwK0K00o+ZoMaxBlBdSsmVKY5aalolgUyTO9KNFRG3d1itsWRpRqrc1XC1dEyskGMuIqDkgwOY8vN/7T/Fw==}
+    dev: false
+
+  /@myriaddreamin/typst.react@0.4.1(@myriaddreamin/typst-ts-renderer@0.4.1)(@myriaddreamin/typst.ts@0.4.1)(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-LY0iZePtBvHB5zntg+5trFcRo2ih1M0oq7yZRaE+GirRviaLvKxzYXKqB9zm3vXyxeL65YphMpkpYxt8NcjPNQ==}
+    peerDependencies:
+      '@myriaddreamin/typst-ts-renderer': ^0.4.1
+      '@myriaddreamin/typst.ts': ^0.4.1
+      react: ^17.0.1
+      react-dom: ^17.0.1
+    dependencies:
+      '@myriaddreamin/typst-ts-renderer': 0.4.1
+      '@myriaddreamin/typst.ts': 0.4.1(@myriaddreamin/typst-ts-renderer@0.4.1)
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+    dev: false
+
+  /@myriaddreamin/typst.ts@0.4.1(@myriaddreamin/typst-ts-renderer@0.4.1):
+    resolution: {integrity: sha512-hNkVeQaqYEt6xSuTxbDzvm0f3KkymbTGpQv6QsYyCUsa/xBzijyDN9pspW+TA+H5f9u+x1GmmGgn3bZojrHttg==}
+    peerDependencies:
+      '@myriaddreamin/typst-ts-renderer': ^0.4.1
+      '@myriaddreamin/typst-ts-web-compiler': ^0.4.1
+    peerDependenciesMeta:
+      '@myriaddreamin/typst-ts-renderer':
+        optional: true
+      '@myriaddreamin/typst-ts-web-compiler':
+        optional: true
+    dependencies:
+      '@myriaddreamin/typst-ts-renderer': 0.4.1
+      idb: 7.1.1
+    dev: false
+
   /@nodelib/fs.scandir@2.1.5:
     resolution: {integrity: sha512-vq24Bq3ym5HEQm2NKCr3yXDwjc7vTsEThRDnkp2DK9p1uqLR+DHurm/NOTo0KG7HYHU7eppKZj3MyqYuMBf62g==}
     engines: {node: '>= 8'}
@@ -587,6 +636,20 @@ packages:
     dependencies:
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
+    dev: false
+
+  /@rescriptbr/react-query@1.1.0(@rescript/react@0.11.0)(react-dom@18.2.0)(react@18.2.0)(rescript@10.1.4):
+    resolution: {integrity: sha512-qFu9+XsHl0RqxbiUlLvUgxxYeQe1QBDbYokOL462nXutTmAws9TEBBsVRHL9e8j+EWitk8tNsqC1ISOKPbmb/A==}
+    peerDependencies:
+      '@rescript/react': '>=0.10.3'
+      react: '>=17.0.2'
+      react-dom: '>=17.0.2'
+      rescript: '>=10.0.1'
+    dependencies:
+      '@rescript/react': 0.11.0(react-dom@18.2.0)(react@18.2.0)
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+      rescript: 10.1.4
     dev: false
 
   /@rollup/rollup-android-arm-eabi@4.9.1:
@@ -696,6 +759,19 @@ packages:
   /@sinclair/typebox@0.27.8:
     resolution: {integrity: sha512-+Fj43pSMwJs4KRrH/938Uf+uAELIgVBmQzg/q1YG10djyfA3TnrU8N8XzqCh/okZdszqBQTZf96idMfE5lnwTA==}
     dev: true
+
+  /@tanstack/query-core@5.17.0:
+    resolution: {integrity: sha512-LoBaPtbMY26kRS+ohII4thTsWkJJsXKGitOLikTo2aqPA4yy7cfFJITs8DRnuERT7tLF5xfG9Lnm33Vp/38Vmw==}
+    dev: false
+
+  /@tanstack/react-query@5.17.0(react@18.2.0):
+    resolution: {integrity: sha512-iNSn6ZA7mHUjrT0a271eKoa1oR1HznlrGbb475awft1kuP3zrhyUCrI8tlGowOr7zRoAxJholjwxO+gfz1IObw==}
+    peerDependencies:
+      react: ^18.0.0
+    dependencies:
+      '@tanstack/query-core': 5.17.0
+      react: 18.2.0
+    dev: false
 
   /@testing-library/dom@9.3.3:
     resolution: {integrity: sha512-fB0R+fa3AUqbLHWyxXa2kGVtf1Fe1ZZFr0Zp6AIbIAzXb2mKbEXl+PCQNUOaq5lbTab5tfctfXRNsWXxa2f7Aw==}
@@ -1575,6 +1651,10 @@ packages:
     dependencies:
       safer-buffer: 2.1.2
     dev: true
+
+  /idb@7.1.1:
+    resolution: {integrity: sha512-gchesWBzyvGHRO9W8tzUWFDycow5gwjvFKfyV9FF32Y7F50yZMp7mP+T2mJIWFx49zicqyC4uefHM17o6xKIVQ==}
+    dev: false
 
   /indent-string@4.0.0:
     resolution: {integrity: sha512-EdDDZu4A2OyIK7Lr/2zG+w5jmbuk1DVBnEwREQvBzspBJkCEbRa8GxU1lghYcaGJCnRWibjDXlq779X1/y5xwg==}

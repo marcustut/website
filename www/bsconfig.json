@@ -22,7 +22,17 @@
     "version": 4,
     "mode": "automatic"
   },
-  "bs-dependencies": ["@rescript/react", "@rescript/core", "rescript-webapi"],
-  "bs-dev-dependencies": ["rescript-vitest"],
-  "bsc-flags": ["-open RescriptCore"]
+  "bs-dependencies": [
+    "@rescript/react",
+    "@rescript/core",
+    "rescript-webapi",
+    "@glennsl/rescript-fetch",
+    "@rescriptbr/react-query"
+  ],
+  "bs-dev-dependencies": [
+    "rescript-vitest"
+  ],
+  "bsc-flags": [
+    "-open RescriptCore"
+  ]
 }

@@ -11,7 +11,7 @@ let make = () => {
   , [url.path])
 
   <header className="flex justify-between h-14">
-    <Link onClick={_ => handleNavigate("/")} className="font-bold text-2xl text-black">
+    <a onClick={_ => handleNavigate("/")} className="font-bold text-2xl cursor-pointer">
       <div className="flex items-center space-x-2">
         <span> {"Marcus Lee"->React.string} </span>
         {switch url.path {
@@ -23,7 +23,7 @@ let make = () => {
           </>
         }}
       </div>
-    </Link>
+    </a>
     <nav className="flex space-x-4">
       <Link onClick={_ => handleNavigate("projects")}> {"projects"->React.string} </Link>
       <Link onClick={_ => handleNavigate("writing")}> {"writing"->React.string} </Link>

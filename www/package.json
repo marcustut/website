@@ -11,8 +11,12 @@
     "test": "vitest"
   },
   "dependencies": {
+    "@glennsl/rescript-fetch": "^0.2.0",
+    "@myriaddreamin/typst.react": "^0.4.1",
     "@rescript/core": "^0.6.0",
     "@rescript/react": "^0.11.0",
+    "@rescriptbr/react-query": "^1.1.0",
+    "@tanstack/react-query": "^5.17.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "rescript-webapi": "^0.9.0"
